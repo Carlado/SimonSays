@@ -1,0 +1,206 @@
+body {
+	
+font-family: 'Oswald', sans-serif;
+background: #304352; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #304352 , #d7d2cc); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #304352 , #d7d2cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+}
+
+/* Main game area */
+
+#game {
+	width: 300px;
+	height: 300px;
+	margin: 100px auto;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 10px solid #333;
+	box-shadow: 1px 3px 4px #222;
+}
+
+/* Color tiles */
+
+#green {
+	background: #449D44;
+	height: 150px;
+	width: 150px;
+	float: left;
+	border-right: 5px solid #333;
+	border-bottom: 5px solid #333;
+	box-sizing: border-box;
+}
+
+#red {
+	background: #C9302C;
+	height: 150px;
+	width: 150px;
+	float: left;
+	border-left: 5px solid #333;
+	border-bottom: 5px solid #333;
+	box-sizing: border-box;
+}
+
+#blue {
+	background: #286090;
+	height: 150px;
+	width: 150px;
+	float: left;
+	border-right: 5px solid #333;
+	border-top: 5px solid #333;
+	box-sizing: border-box;
+}
+
+#yellow {
+	background: #EC971F;
+	height: 150px;
+	width: 150px;
+	float: left;
+	border-left: 5px solid #333;
+	border-top: 5px solid #333;
+	box-sizing: border-box;
+}
+
+/* Color tiles light up effect */
+
+#green.light {
+	background: #13ff7c;
+}
+
+#yellow.light{
+  background-color : #fed93f;
+}
+
+#blue.light{
+  background-color : #1c8cff;
+}
+
+#red.light{
+  background-color : #FC635F;
+}
+
+/* Middle settings area */
+
+#scoreboard {
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+	z-index: 2;
+	background: #c1c1c1;
+	border-radius: 50%;
+	border: 10px solid #333;
+	box-sizing: border-box;
+}
+
+/* Score display */
+
+#stage {
+	width: 60px;
+	height: 40px;
+	background: #32050C;
+	position: absolute;
+	border-radius: 5px;
+	top: 20px;
+	left: 35px;
+	color: #DC0D29;
+}
+
+#stage p {
+	position: absolute;
+	line-height: 40px;
+	width: 100%;
+	margin: 0;
+	text-align: center;
+	font-size: 1.3em;
+}
+
+/* New Game Button */
+
+#start {
+	position: absolute;
+	top: 80px;
+	left: 25px;
+	border-radius: 100%;
+  	box-shadow: 0px 2px 3px #222;
+	width: 19px;
+	height: 19px;
+	background: #FC0102;
+	border: 1px solid #444;
+	outline: none;
+	cursor: pointer;
+}
+
+
+#start:active {
+  transform: translateY(0.6px);
+}
+
+#start:disabled {
+	cursor: default;
+}
+
+#startlabel {
+	position: absolute;
+	top: 54px;
+	left: 15px;
+	font-size: 0.6em;
+	text-transform: uppercase;
+}
+
+/* Strict toggle button */
+
+#strict {
+	position: absolute;
+	top: 82px;
+	left: 70px;
+	width: 40px;
+	height: 19px;
+}
+
+#strictlabel {
+	position: absolute;
+	top: 54px;
+	left: 77px;
+	font-size: 0.6em;
+	text-transform: uppercase;
+}
+
+
+/* Toggle CSS */
+
+.toggle-light .toggle-slide {
+  border-radius: 9999px;
+  box-shadow: 0 0 0 1px #999;
+}
+.toggle-light .toggle-on,
+.toggle-light .toggle-off {
+  font-size: 9px;
+  font-weight: 500;
+}
+.toggle-light .toggle-on,
+.toggle-light .toggle-select .toggle-inner .active {
+  background: #45a31f;
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+}
+.toggle-light .toggle-off,
+.toggle-light .toggle-select .toggle-on {
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.2);
+  background: -webkit-linear-gradient(#cfcfcf, #f5f5f5);
+  background: linear-gradient(#cfcfcf, #f5f5f5);
+}
+.toggle-light .toggle-blob {
+  border-radius: 50px;
+  background: -webkit-linear-gradient(#f5f5f5, #cfcfcf);
+  background: linear-gradient(#f5f5f5, #cfcfcf);
+  box-shadow: 1px 1px 2px #888;
+}
+.toggle-light .toggle-blob:hover {
+  background: -webkit-linear-gradient(#e4e4e4, #f9f9f9);
+  background: linear-gradient(#e4e4e4, #f9f9f9);
+}
